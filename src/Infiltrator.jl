@@ -10,7 +10,7 @@ using REPL.LineEdit: getproperty
 using REPL.LineEdit
 using Markdown
 
-export @infiltrate, @infiltry, @exfiltrate, @withstore, safehouse, exfiltrated, infiltrate
+export @infiltrate, @infiltry, @exfiltrate,   @withstore, safehouse, exfiltrated, infiltrate
 
 const REPL_HOOKED = Ref{Bool}(false)
 const INFILTRATION_LOCK = Ref{ReentrantLock}()
@@ -20,7 +20,7 @@ function __init__()
   INFILTRATION_LOCK[] = ReentrantLock()
   if VERSION >= v"1.5.0-DEV.282"
     if isdefined(Base, :active_repl_backend)
-        pushfirst!(Base.active_repl_backend.ast_transforms, ast_transformer(gensym()))
+        pushfirst!(Base.active_repl_backend.ast_transforms,   ast_transformer(gensym()))
         REPL_HOOKED[] = true
     else
       atreplinit() do repl
