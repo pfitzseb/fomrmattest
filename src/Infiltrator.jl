@@ -32,7 +32,7 @@ function __init__()
             iter += 1
           end
           if isdefined(Base, :active_repl_backend)
-            pushfirst!(Base.active_repl_backend.ast_transforms, ast_transformer(gensym()))
+            pushfirst!(Base.active_repl_backend.ast_transforms,   ast_transformer(gensym()))
             REPL_HOOKED[] = true
           end
         end
