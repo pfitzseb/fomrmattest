@@ -1,0 +1,15 @@
+name: Julia Formatter
+on:
+  pull_request:
+
+env:
+  CI: true
+  JULIA_PKG_USE_CLI_GIT: true
+
+jobs:
+  format:
+    if: github.event.pull_request.draft == false
+    runs-on: [self-hosted]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: julia-actions/julia-format@v2
