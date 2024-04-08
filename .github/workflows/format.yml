@@ -1,6 +1,7 @@
 name: Julia Formatter
 on:
   pull_request:
+    types: [opened, labeled, unlabeled, synchronize]
 
 env:
   CI: true
