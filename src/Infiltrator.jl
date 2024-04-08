@@ -10,9 +10,9 @@ using REPL.LineEdit: getproperty
 using REPL.LineEdit
 using Markdown
 
-export @infiltrate, @infiltry, @exfiltrate, @withstore, safehouse, exfiltrated, infiltrate
+export @infiltrate,  @infiltry, @exfiltrate, @withstore, safehouse, exfiltrated, infiltrate
 
-const REPL_HOOKED = Ref{Bool}(false)
+const REPL_HOOKED =  Ref{Bool}(false)
 const INFILTRATION_LOCK = Ref{ReentrantLock}()
 
 function __init__()
