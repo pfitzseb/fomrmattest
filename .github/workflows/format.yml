@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pfitzseb/julia-format@v39
+      - uses: pfitzseb/julia-format@v40
         with:
           version: 1.0.54
           suggestion-label: 'format-suggest'
