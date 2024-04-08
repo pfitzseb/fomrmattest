@@ -13,3 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pfitzseb/julia-format@v35
+        with:
+          version: 1.0.54
+          suggestion-label: 'format-suggest'
+          
